@@ -69,7 +69,7 @@ def delete_branch():
 def set_remote_repository():
     remote_url = input("URL del repositorio remoto: ")
     run_command(f"git remote add origin {remote_url}")
-    run_command("git push -U origin main")
+    run_command("git push --set-upstream origin main")
 
 
 def make_pull():
@@ -77,7 +77,7 @@ def make_pull():
 
 
 def make_push():
-    run_command("git push")
+    run_command("git push -f")
 
 
 while True:
